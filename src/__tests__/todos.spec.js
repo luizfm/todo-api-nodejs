@@ -96,7 +96,7 @@ describe('Todos', () => {
     const getAllTodosResponse = await request(app)
       .get((`/todos/`))
       .set('username', userResponse.body.username);
-    
+
     expect(
       getAllTodosResponse.body.find(
         (todo)=>todo.id === todoResponse.body.id
